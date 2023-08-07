@@ -1,38 +1,202 @@
-.App {
-  text-align: center;
+:root {
+  --text-primary: white;
+  --text-secondary: #ffbd39;
+  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.banner {
+  display: inline-flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 1px solid red;
   align-items: center;
+}
+
+.banner img {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid transparent;
+  animation: profile-animation 3s infinite;
+}
+
+.title-wrapper {
+  display: inline-block;
+  flex-wrap: nowrap;
+}
+
+.title-wrapper span:nth-child(1) {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.title-wrapper h1 {
+  color: var(--text-primary);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 4rem;
+}
+
+.title-wrapper span:nth-last-child(2n) {
+  line-height: 1px;
+  margin-left: 10px;
+  color: var(--text-secondary);
+}
+
+.title-wrapper h4 {
+  line-height: 1px;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.title-wrapper h4::after {
+  content: '}';
+  color: var(--text-secondary)
+}
+
+.title-wrapper h4::before {
+  content: '{';
+  color: var(--text-secondary)
+}
+.about-section div{
+  max-width: 50%;
+  border: 1px solid red;
+}
+
+@keyframes profile-animation {
+  0% {
+    filter:saturate(0%);
+    border-left: 3px solid #ffbd39;
+    
+  }
+  25%{
+    border-top: 3px solid #ffbd39;
+  }
+  50% {
+    filter:saturate(50%);
+    border-right: 3px solid #ffbd39;
+  }
+  100% {
+    border-bottom: 3px solid #ffbd39;
+    filter: saturate(100%)
+  }
+}
+
+.container>div>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text {
+  padding-left: 1rem;
+  font-size: 6vh;
+  color: #545864;
+}
+
+.text span {
+  display: inline-block;
+  position: relative;
+}
+
+.slopeBegin {
+  background-color: #131419;
+  clip-path: polygon(20% 0, 70% 0, 50% 100%, 0% 100%);
+}
+
+.slopeEnd {
+  clip-path: polygon(70% 0, 100% 0, 80% 100%, 50% 100%);
+}
+
+.slopeBegin,
+.slopeEnd {
+  position: absolute;
+  width: 170%;
+  height: 106vh;
+  cursor: pointer;
+}
+
+.pink {
+  background: linear-gradient(to right, deeppink 0%, coral 100%);
+}
+
+.teal {
+  background: linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%);
+}
+
+.tomato {
+  background: linear-gradient(to right, tomato 0%, gold 100%, orange);
+}
+
+.designation {
+  font-size: 6vmin;
+  color: #adaeb3;
+  border-bottom: 1px white
+}
+
+.name {
+  font-size: 7dvh;
+  color: #e2e2e2;
+  line-height: 50px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #ffff;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 5px 12px 5px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border:1px solid transparent;
+  background-color: rgba(255,255,255,0.5);
+}
+.navbar li:not(:last-of-type) {
+  margin-right: 5px;
+}
+.navbar li {
+  list-style-type: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: inline;
+}
+
+.navbar ul {
+  /* backdrop-filter: blur(8px); */
+  /* background-color: rgba(255,255,255,0.7); */
+  list-style-type: none;
+  margin-inline: 0.1rem;
+  padding: 0;
+  /* padding: 0.5rem 0rem 0.5rem; */
+  border-radius: 100px;
+}
+
+.navbar li a:hover {
+  cursor: pointer;
+  color: var(--text-primary);
+  border:1px solid var(--text-secondary);
+}
+
+.active-border {
+  color: #20232f !important;
+  background-color: var(--text-secondary);
+}
+
+.home-pic img {
+  width: 240px;
+  aspect-ratio: 1/1
+}
+
+.about {
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+}
+
+.about p {
+  font-size: 2.6vh;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  line-break: strict;
+  text-align: left;
+  width: 80vw;
 }
