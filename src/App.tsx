@@ -34,7 +34,7 @@ const Page = ({ offset, onClick }: PageProps) => (
     {
       offset === 1
         ?
-        <ParallaxLayer offset={offset} speed={1}>
+        <ParallaxLayer offset={offset} speed={0.2}>
           <div className='about-section'>
             <div>
               <img src={profile} alt='DP' />
@@ -45,7 +45,7 @@ const Page = ({ offset, onClick }: PageProps) => (
                 <p>name     :<span>"Mubashir Ali Angathil"</span><span>,</span></p>
                 <p>dob      :<span>"June 23, 2001"</span><span>,</span></p>
                 <p>domain   :<span>"MERN Stack"</span><span>,</span></p>
-                <p>Location :<span>"MERN Stack"</span><span>,</span></p>
+                <p>Location :<span>"Wayanad, Kerala, India"</span><span>,</span></p>
                 <p>email    :<span>"mail.mubashirangathil@gmail.com"</span><span></span></p>
               </div>
             </div>
