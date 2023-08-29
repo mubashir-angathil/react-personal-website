@@ -1,0 +1,231 @@
+@import '../../App.scss';
+
+.about-title-section {
+    transition: all 0.3s linear;
+
+    // Main title
+    :first-child {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            text-transform: uppercase;
+            font-weight: bolder;
+
+            span {
+                color: $text-yellow;
+            }
+        }
+
+        // Subtitle
+        p {
+            font-family: $font-secondary;
+            color: $text-subtitle;
+            font-size: 1.1rem;
+            color: $lite-white;
+        }
+    }
+
+    // experience title
+    :last-child {
+
+        // title
+        h3 {
+            color: $text-yellow;
+            font-size: 2.4rem;
+            font-weight: bolder;
+        }
+
+        // subtitle
+        P {
+            letter-spacing: 2px;
+            color: $lite-white;
+        }
+    }
+}
+
+.about-description-section {
+    transition: all 0.3s linear;
+
+    p {
+        font-family: $font-secondary;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+}
+
+.about-skills-section {
+    transition: all 0.3s linear;
+
+    h4 {
+        color: $text-yellow;
+    }
+
+    p {
+        font-family: $font-secondary;
+    }
+
+    span {
+        cursor: pointer;
+        background-color: $background-dark-yellow;
+        margin: 4px;
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 13px;
+        font-family: $font-secondary;
+
+        &::before {
+            content: '#';
+            color: $text-yellow;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .about {
+        height: 110vh !important;
+
+        div:first-child {
+            margin-top: 0.5rem;
+        }
+    }
+
+    .about-title-section {
+        :first-child {
+            h2 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+            }
+        }
+
+        :last-child {
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+            }
+        }
+    }
+
+    .about-description-section {
+        p {
+            font-size: 0.7rem;
+        }
+    }
+
+    .about-skills-section {
+        h4 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.7rem;
+        }
+
+        span {
+            font-size: 0.5rem;
+            margin: 2px;
+            padding: 5px
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+    .about-title-section {
+        :first-child {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        :last-child {
+            h3 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .about-description-section {
+        p {
+            font-size: 0.8rem;
+        }
+    }
+
+    .about-skills-section {
+        h4 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        span {
+            margin: 3px;
+            padding: 8px;
+            font-size: 11px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-title-section {
+        :first-child {
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        :last-child {
+            h3 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    .about-description-section {
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .about-skills-section {
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        span {
+            font-size: 0.8rem;
+        }
+    }
+
+}

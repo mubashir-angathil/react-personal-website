@@ -1,0 +1,152 @@
+@import '../../App.scss';
+
+.home {
+    width: 100%;
+    // background: url("https://megaone.acrothemes.com/personal-hotspot/images/banner.jpg");
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // overflow: hidden;
+
+    .swipe-button {
+        position: absolute;
+        cursor: pointer;
+        top: 80%;
+        left: 50%;
+        width: 1.5rem;
+        height: 2.5rem;
+        border-radius: 15px;
+        outline: 2px solid $text-yellow;
+
+        span {
+            position: absolute;
+            top: 6px;
+            left: 9px;
+            width: 0.4em;
+            height: 0.4rem;
+            border-radius: 50%;
+            animation-delay: 1ss;
+            background-color: $text-yellow;
+            animation: scroll-down 0.7s infinite ease-in-out;
+        }
+    }
+
+    img {
+        transition: all 0.5s linear;
+        object-fit: contain;
+    }
+
+    h1 {
+        font-weight: 900;
+        text-transform: uppercase;
+        transition: all 0.5s linear;
+
+
+        span {
+            &:first-child {
+                display: inline-block;
+                padding-inline: 0.5rem;
+                width: max-content;
+                background-color: rgb(255, 253, 253);
+                color: $background-primary;
+            }
+
+            &:nth-child(2) {
+                letter-spacing: 1px;
+                background:url('https://t3.ftcdn.net/jpg/05/05/43/36/360_F_505433609_VTafkeWEyOKCyOFfCRQnZswyxN7T3npj.jpg');
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+        }
+
+    }
+
+    p {
+        font-size: x-large;
+        text-transform: uppercase;
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .home {
+        h1 {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+    .home {
+        h1 {
+            font-size: 50px;
+        }
+
+        img {
+            width: 65vh;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+    .home {
+        h1 {
+            font-size: 50px;
+        }
+
+        img {
+            width: 65vh;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+    .home {
+        h1 {
+            font-size: 55px;
+        }
+
+        img {
+            width: 80vh;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .home {
+        h1 {
+            font-size: 70px;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        img {
+            width: 80vh;
+        }
+    }
+}
+
+// Scroll-down button animation
+@keyframes scroll-down {
+    from {
+        transform: translateY(0px);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(20px);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,44 @@
+// ------------------------------ Global Variables ----------------------------------------------
+$background-primary: #060818f9;
+$background-secondary: #1d1d1d;
+$background-dark-yellow: rgb(59, 59, 19);
+$font-primary: 'Oswald';
+$font-secondary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$text-yellow: rgb(255, 193, 7);
+$background-wheat: wheat;
+$text-wheat: wheat;
+$text-subtitle: antiquewhite;
+$lite-white: rgba(255, 255, 255, 0.6);
+
+// ------------------------------- Mixin ------------------------------------------------------------
+
+// Define mixin for glass effect
+@mixin glass-effect() {
+    backdrop-filter: blur(8px);
+    background: rgba(164, 164, 164, 0.096);
+}
+
+// Define mixin to set cover image any where
+@mixin cover-image($url:'https://www.solarsystemscope.com/textures/download/8k_earth_nightmap.jpg') {
+    background: url($url);
+    background-position: center center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+// ---------------------------------- Global Styles -----------------------------------------------------------
+body,
+html {
+    background-color: $background-primary;
+    font-family: $font-primary;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+// hide scroll bar globally
+::-webkit-scrollbar {
+    display: none;
+}

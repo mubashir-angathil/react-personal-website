@@ -1,0 +1,33 @@
+@import '../../App.scss';
+
+// contact card
+.contact-card {
+    background-color: rgba(46, 46, 46, 0.9);
+
+    // main icon button
+    span {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        justify-content: center;
+        transition: all 0.5s;
+        padding: 1.5rem;
+        color: $text-yellow;
+        @include glass-effect();
+    }
+
+    // Email
+    a {
+        text-decoration: none;
+        color: $lite-white;
+    }
+
+    &:hover {
+        span {
+            background-color: $text-yellow;
+            color: inherit;
+        }
+    }
+}

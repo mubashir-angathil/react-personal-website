@@ -1,0 +1,132 @@
+@import '../career-and-history/CareerAndHistory.scss';
+@import '../../App.scss';
+
+@mixin project-grid-template($min-width) {
+    grid-template-columns: repeat(auto-fit, minmax(min($min-width), 1fr));
+}
+
+// settings background image
+#works {
+    @include cover-image("https://img.freepik.com/free-photo/dark-galaxy-background_53876-98573.jpg?w=1060&t=st=1693325557~exp=1693326157~hmac=cd9c5887b5867e232329e0aaa1aeb7254db72c3e4e2fbc3982ef95633a47f609");
+    background-size: auto;
+    background-position: center center;
+}
+
+.projects-container {
+
+    // Parent unordeared list
+    ul {
+        list-style: none;
+        display: grid;
+        float: left;
+        flex: 1;
+        gap: 20px;
+        @include project-grid-template(450px);
+    }
+
+    // li
+    li {
+        cursor: pointer;
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+        transition: all 0.5s;
+        transform: scale(0.97);
+        @include glass-effect();
+
+        // card underline
+        &::after {
+            content: '';
+            position: absolute;
+            transition: all 0.5s;
+            height: 5px;
+            width: 50%;
+            left: 0;
+            bottom: 0;
+            border-radius: 10px;
+            background-color: $text-yellow;
+        }
+
+        &:hover {
+            // zoom card
+            transform: scale(1.03);
+
+            // scale underline
+            &::after {
+                width: 100%;
+            }
+        }
+
+        // Project thumnail container
+        .thumbnail {
+            width: 100%;
+            overflow: hidden;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            object-position: center;
+            background-origin: content-box;
+
+            // project image
+            img {
+                transition: all 0.3s;
+                width: 100%;
+                height: 100%;
+                max-width: 100%;
+                border-radius: 10px;
+                box-sizing: content-box;
+                opacity: 0.8;
+
+                &:hover {
+                    scale: 1.1;
+                    opacity: 1;
+                }
+            }
+        }
+
+        .title-section {
+
+            // project title
+            h3,
+            a {
+                color: $text-yellow;
+            }
+
+            // live project
+            a {
+                text-decoration: none;
+                font-size: 1.1rem;
+
+                &::before {
+                    content: '🔗';
+                }
+            }
+        }
+
+        // content container > content
+        .content-section {
+            .description-section {
+                font-family: $font-secondary;
+            }
+        }
+
+        // footer container > skills
+        .footer-section {
+            @include skills-badge();
+
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .projects-container {
+        ul {
+            gap: 10px;
+            @include project-grid-template(250px);
+        }
+    }
+}

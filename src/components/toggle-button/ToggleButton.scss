@@ -1,0 +1,28 @@
+
+@import '../../App.scss';
+
+// Style custom toggle with animation on hover 
+.custom-toggle {
+    cursor: pointer;
+    display: inline-block;
+    width: 25px;
+
+    span {
+        display: block;
+        height: 2px;
+        width: 25px;
+        margin-top: 4px;
+        transition: all 0.3s linear;
+        background-color: white;
+    }
+
+    &:hover {
+        span {
+            background-color: $text-yellow;
+
+            &:nth-child(odd) {
+                transform: scale3d(0.7, 1, 0.7);
+            }
+        }
+    }
+}

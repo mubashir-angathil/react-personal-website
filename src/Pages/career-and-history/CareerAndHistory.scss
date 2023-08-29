@@ -1,0 +1,237 @@
+@import '../../App.scss';
+
+// Define mixin to create gradient to counter and connector
+@mixin time-line-gradient {
+    background: linear-gradient(white, $background-wheat);
+}
+
+// Define mixin for create basics of counter
+@mixin counter {
+    @include time-line-gradient();
+    content: counter(achievements);
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    top: 0;
+    padding-top: 0.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    color: $background-secondary;
+}
+
+// Define mixin for create connector
+@mixin connector {
+    @include time-line-gradient();
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    top: 0;
+}
+
+// Define mixin for create skills
+@mixin skills-badge {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: smaller;
+
+    span {
+        padding: 5px;
+        margin: 2px;
+        font-size: 0.7rem;
+        border-radius: 5px;
+
+        &::before {
+            content: '# ';
+            color: $text-yellow;
+        }
+    }
+}
+
+// Setting background for career section 
+#career {
+    @include cover-image()
+}
+
+// Career section
+.career-history-section {
+    padding-top: 4rem;
+
+    div {
+
+        width: 100%;
+
+        .time-line-container {
+            margin-top: 10px;
+        }
+
+        // Parent unordered list
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            // child unordered list
+            ul {
+                list-style: disc;
+                margin-left: 1.3rem;
+            }
+
+            // list item
+            li.timeline-item {
+                @include glass-effect();
+                width: 70%;
+                padding: 1.5rem;
+                margin-bottom: 0.8rem;
+                border-radius: 5px;
+                font-family: $font-secondary;
+                // background-color: $background-dark-yellow;
+                backdrop-filter: blur(5px);
+                transition: all 0.5s ease-in-out;
+                counter-increment: achievements;
+
+                // Single list items
+                &:nth-child(odd) {
+                    float: left;
+                    clear: right;
+                    transform: translateX(0px);
+
+                    &::after {
+                        // Import counter mixin
+                        @include counter();
+                        right: 10px;
+                        transform: translateX(100%) translateY(10px);
+                    }
+
+                    &:not(:last-child)::before {
+                        // Import connector mixin
+                        @include connector();
+                        right: 0;
+                        transform: translateX(18px) translateY(25px);
+                    }
+                }
+
+                // Double list items
+                &:nth-child(even) {
+                    float: right;
+                    clear: left;
+                    transform: translateX(0px);
+
+                    &::after {
+                        // Import counter mixin
+                        @include counter();
+                        left: 10px;
+                        transform: translateX(-100%) translateY(10px);
+                    }
+
+                    &:not(:last-child)::before {
+                        // Import list item connector mixin
+                        @include connector();
+                        left: 0;
+                        transform: translateX(-16px) translateY(15px);
+                    }
+                }
+
+                // header
+                .item-header-section {
+                    h6 {
+
+                        // Job position
+                        &:first-child {
+                            color: $text-yellow;
+                            font-size: 1.1rem;
+                        }
+
+                        // job duration
+                        &:last-child {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+                .item-body-section {
+
+                    span,
+                    a {
+                        color: $lite-white;
+                    }
+
+                    i {
+                        color: $text-wheat;
+                    }
+
+                    a {
+                        text-decoration: none;
+                    }
+
+                    .item-logo-section {
+                        object-fit: 'cover';
+                        object-position: 'center';
+                        height: 100px;
+                        width: 100px
+                    }
+
+                    .skills-section {
+                        @include skills-badge();
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .career-history-section {
+        div {
+
+            ul {
+                padding: 1px;
+
+                li.timeline-item {
+                    width: 100%;
+
+                    // link and location
+                    span {
+                        font-size: small;
+                    }
+
+                    // Single list items
+                    &:nth-child(odd) {
+                        float: left;
+                        clear: left;
+                        transform: translateX(15px);
+
+                        // counter
+                        &::after {
+                            left: 10px;
+                            transform: translateX(-100%) translateY(10px);
+                        }
+
+                        // connector
+                        &:not(:last-child)::before {
+                            left: 0;
+                            transform: translateX(-16px) translateY(26px);
+                        }
+                    }
+
+                    // Double list items
+                    &:nth-child(even) {
+                        float: left;
+                        clear: left;
+                        transform: translateX(15px);
+
+                        // connector
+                        &:not(:last-child)::before {
+                            transform: translateX(-16px) translateY(26px);
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+
+    a {
+        color: inherit;
+        i {
+            cursor: pointer;
+            position: relative;
+            padding: 0.6rem;
+            transition: 0.5s;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: gold;
+                color: black;
+            }
+
+        }
+    }
+}

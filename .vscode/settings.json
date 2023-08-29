@@ -1,0 +1,19 @@
+{
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnPaste": false, // required
+    "editor.formatOnType": false, // required
+    "editor.formatOnSave": false, // optional
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+    },
+    "cSpell.words": [
+      "Offcanvas"
+    ],
+    "[html]": {
+      "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[scss]": {
+      "editor.defaultFormatter": "vscode.css-language-features"
+    }
+  }

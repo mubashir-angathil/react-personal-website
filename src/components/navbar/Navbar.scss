@@ -1,0 +1,67 @@
+@import '../../App.scss';
+/* Import React Bootstrap CSS */
+// @import '~bootstrap/dist/css/bootstrap.css';
+
+
+/* Define custom styles */
+
+// Close button
+.custom-close {
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border-radius: 50%;
+
+    &:hover {
+        color: $text-yellow;
+        transform: rotate(90deg);
+    }
+}
+
+// navbar
+.navbar-items {
+    font-size: 1.3rem;
+
+    a {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            transform: scaleX(0);
+            bottom: 0;
+            left: 0;
+            background-color: $text-yellow;
+            transform-origin: bottom left;
+            transition: transform 0.3s ease-in;
+        }
+
+        &:hover {
+            &::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+    }
+
+    // border-bottom: 3px solid $text-yellow;
+}
+
+// Offcanvas
+.offcanvas {
+    background: $background-secondary;
+    color: white
+}
+// offcanvas footer
+.offcanvas-footer {
+    p {
+        margin-top: 1.5rem;
+        color: gray;
+    }
+}
+
+// Download resume button style
+.custom-rounded {
+    border-radius: 30px
+}
