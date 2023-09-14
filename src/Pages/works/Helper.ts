@@ -37,12 +37,23 @@ export const PROJECTS: Project[] = [
     toolsUsed: ['NodeJs, Javascript', 'CSS', 'ExpressJs', 'MongoDB', 'Git', 'GitHub']
   },
   {
-    title: 'WOSA.',
+    title: 'WMO Alumni.',
     link: 'https://alumni.wmocollege.ac.in/',
     thumbnail: IMAGES.projects.alumniWMOC,
-    description: `WMOSA is a scalable web application designed for Alumni Association of WMO Arts and Science College, Wayanad to manage subscription fees.
+    description: `WMO Alumni is a scalable web application designed for Alumni Association of WMO Arts and Science College, Wayanad to manage subscription fees.
     They can dynamically modify the content of the website and alumni can become members by filling basic details and initiate subscription through this website.`,
     toolsUsed: ['ReactJs, Javascript', 'CSS', 'php codeigniter', 'Figma', 'MYSQL', 'Git', 'GitHub']
+  },
+  {
+    title: 'Portfolio.',
+    link: 'https://portfolio-mubashirangathli.vercel.app/',
+    thumbnail: IMAGES.projects.portfolio,
+    description: `
+    The portfolio website is currently built as a static site utilizing React with TypeScript.
+    While its current state is static, it has been strategically designed with scalability and robustness in mind.
+    There are plans to evolve it into a dynamic website that can adapt to changing content requirements in the future.
+    `,
+    toolsUsed: ['ReactJs', 'TypeScript', 'Sass', 'CSS', 'Webpack', 'Babel']
   },
   {
     title: 'XandO.',
