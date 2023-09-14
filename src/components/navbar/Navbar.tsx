@@ -22,7 +22,7 @@ export const NavbarComponent: React.FC = () => {
             <Container fluid >
                 <ToggleButton handleOffCanvasToggle={handleOffCanvasToggle} />
                 <span className='d-flex' style={{ width: '2.5rem', height: '2.5rem', alignItems: 'center', justifyContent: 'center' }}>
-                    <img src={IMAGES.displayPicture} alt='Logo' width='36px' height='36px' />
+                    <img src={IMAGES.logo} alt='Logo' width='36px' height='36px' />
                 </span>
                 <Navbar.Offcanvas
                     show={showOffCanvas}

@@ -36,9 +36,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {
-              outputPath: 'assets/Images', // Relative path to the 'dist' directory
-            },
+            // options: {
+            //   outputPath: 'assets/Images', // Relative path to the 'dist' directory
+            // },
           },
         ],
       },
