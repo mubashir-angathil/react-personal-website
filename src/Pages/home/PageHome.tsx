@@ -17,7 +17,7 @@ const PageHome: React.FC = () => {
                             <span>Hello, I am</span>
                             <span className='d-block'>Mubashir Angathil.</span>
                         </h1>
-                        <p>MERN Stack developer</p>
+                        <p>Full Stack developer (MERN)</p>
                     </div>
                 </div>
                 <a className='swipe-button' href='#about'>

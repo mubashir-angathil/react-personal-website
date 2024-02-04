@@ -1,5 +1,9 @@
 @import '../../App.scss';
 
+#about {
+    min-height: 100dvh;
+}
+
 .about-title-section {
     transition: all 0.3s linear;
 
@@ -84,28 +88,31 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-    .about {
-        height: 110vh !important;
-
+    #about  {
+        height: auto;
+        padding-top: 5rem;
+        padding-inline: 1.7rem;
         div:first-child {
-            margin-top: 0.5rem;
+            margin-top: 0.1rem;
         }
     }
 
     .about-title-section {
+        margin-top: 80px;
+
         :first-child {
             h2 {
-                font-size: 1rem;
+                font-size: 1.5rem;
             }
 
             p {
-                font-size: 0.7rem;
+                font-size: 0.9rem;
             }
         }
 
         :last-child {
             h3 {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
 
             p {
@@ -116,7 +123,7 @@
 
     .about-description-section {
         p {
-            font-size: 0.7rem;
+            font-size: 0.9rem;
         }
     }
 

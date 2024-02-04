@@ -1,15 +1,14 @@
 {
-  "name": "amr_portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server ",
-    "build": "webpack ",
+    "start": "webpack-dev-server",
+    "build": "webpack",
     "test": "jest",
     "coverage": "jest --coverage",
-    "lint": "eslint src/* --fix",
-    "prepare": "husky install"
+    "lint": "eslint src/* --fix"
   },
   "keywords": [],
   "author": "",

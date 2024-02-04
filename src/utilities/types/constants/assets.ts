@@ -4,6 +4,9 @@ import fms from '../../../assets/images/fms.png'
 import xando from '../../../assets/images/xando.png'
 import logo from '../../../assets/images/logo-white.png'
 import portfolio from '../../../assets/images/portfolio.png'
+import movieTrends from '../../../assets/images/movietrends.png'
+import boardAdminDashboard from '../../../assets/images/boardsignIn.png'
+import nthTrack from '../../../assets/images/nthtrack.png'
 
 const IMAGES = {
   logo,
@@ -12,9 +15,11 @@ const IMAGES = {
     fixtures,
     fms,
     xando,
-    portfolio
+    portfolio,
+    movieTrends,
+    boardAdminDashboard,
+    nthTrack
   }
-
 }
 
 export default IMAGES

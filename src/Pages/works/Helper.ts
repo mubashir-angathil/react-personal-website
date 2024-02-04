@@ -10,6 +10,54 @@ interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    title: 'Movie Trends',
+    link: 'https://movie-trends-live.vercel.app/',
+    thumbnail: IMAGES.projects.movieTrends,
+    description: `
+    A platform for discovering and exploring a vast collection of movies. Whether you're a cinephile or just looking for something to watch tonight, Movie Trends has you covered.
+    `,
+    toolsUsed: [
+      'ReactJs',
+      'TypeScript',
+      'Javascript',
+      'CSS',
+      'Git',
+      'GitHub',
+      'TMDB API'
+    ]
+  },
+  {
+    title: 'Board Admin Dashboard',
+    link: 'https://board-dashboard-live.vercel.app',
+    thumbnail: IMAGES.projects.boardAdminDashboard,
+    description: `
+    Created a responsive React.js Dashboard with Google Auth. Highlights include user-friendly authentication, design excellence, robust user profiles, responsive UI, and dynamic charts. Tech stack: React.js, Google Auth, SCSS. Explore the project for practical React.js skills and seamless authentication.
+    `,
+    toolsUsed: ['ReactJs', 'TypeScript', 'Javascript', 'CSS', 'Git', 'GitHub']
+  },
+  {
+    title: 'Nth Track',
+    link: 'https://nth-track.vercel.app',
+    thumbnail: IMAGES.projects.nthTrack,
+    description: `
+    About
+    "Nth Track" stands out with a robust set of features tailored to enhance project management efficiency. With a focus on versatility and user-friendliness, it empowers teams to collaborate seamlessly and achieve project goals effectively.
+    `,
+    toolsUsed: [
+      'ReactJs',
+      'TypeScript',
+      'Javascript',
+      'Vite',
+      'CSS',
+      'NodeJs',
+      'MariaDB',
+      'Sequelize ORM',
+      'Socket.io',
+      'Git',
+      'GitHub'
+    ]
+  },
+  {
     title: 'FMS.',
     link: 'https://office.wmocollege.in/',
     thumbnail: IMAGES.projects.fms,
@@ -22,19 +70,26 @@ export const PROJECTS: Project[] = [
            egrantz (special grants provided by the government) has been digitized and accounts and fee management has been made paperless.
             Scholarship module helps to manage data banks and details of related scholarship students
     `,
-    toolsUsed: ['ReactJs', 'TypeScript', 'Javascript', 'jQuery', 'AJAX', 'Redux', 'Figma', 'Webpack', 'babel', 'CSS', 'NodeJs', 'MariaDB', 'Prisma ORM', 'Git', 'GitHub', 'ZOD', 'Eslint', 'husky']
-  },
-  {
-    title: 'Fixtures.',
-    link: 'https://github.com/mubashir-angathil/shopping_cart',
-    thumbnail: IMAGES.projects.fixtures,
-    description: `Fixture is a robust and scalable web application developed by me.
-    Server-side logic, routing, and database management are seamlessly handled for a seamless user experience.
-     Aimed at the furniture industry, anyone can use it to present their business online.
-    Users can discover the evolving trends of the exterior and interior world.
-   Featured products and other sales products can be well displayed.  
-    `,
-    toolsUsed: ['NodeJs, Javascript', 'CSS', 'ExpressJs', 'MongoDB', 'Git', 'GitHub']
+    toolsUsed: [
+      'ReactJs',
+      'TypeScript',
+      'Javascript',
+      'jQuery',
+      'AJAX',
+      'Redux',
+      'Figma',
+      'Webpack',
+      'babel',
+      'CSS',
+      'NodeJs',
+      'MariaDB',
+      'Prisma ORM',
+      'Git',
+      'GitHub',
+      'ZOD',
+      'Eslint',
+      'husky'
+    ]
   },
   {
     title: 'WMO Alumni.',
@@ -42,7 +97,15 @@ export const PROJECTS: Project[] = [
     thumbnail: IMAGES.projects.alumniWMOC,
     description: `WMO Alumni is a scalable web application designed for Alumni Association of WMO Arts and Science College, Wayanad to manage subscription fees.
     They can dynamically modify the content of the website and alumni can become members by filling basic details and initiate subscription through this website.`,
-    toolsUsed: ['ReactJs, Javascript', 'CSS', 'php codeigniter', 'Figma', 'MYSQL', 'Git', 'GitHub']
+    toolsUsed: [
+      'ReactJs, Javascript',
+      'CSS',
+      'php codeigniter',
+      'Figma',
+      'MYSQL',
+      'Git',
+      'GitHub'
+    ]
   },
   {
     title: 'Portfolio.',
@@ -65,6 +128,32 @@ export const PROJECTS: Project[] = [
     I got a great opportunity to contribute to this rich project.
     The rich user interface gives an immense look
     `,
-    toolsUsed: ['ReactJs', 'Javascript', 'TailwindCSS', 'CSS', 'websocket', 'Figma']
+    toolsUsed: [
+      'ReactJs',
+      'Javascript',
+      'TailwindCSS',
+      'CSS',
+      'websocket',
+      'Figma'
+    ]
+  },
+  {
+    title: 'Fixtures.',
+    link: 'https://github.com/mubashir-angathil/shopping_cart',
+    thumbnail: IMAGES.projects.fixtures,
+    description: `Fixture is a robust and scalable web application developed by me.
+    Server-side logic, routing, and database management are seamlessly handled for a seamless user experience.
+     Aimed at the furniture industry, anyone can use it to present their business online.
+    Users can discover the evolving trends of the exterior and interior world.
+   Featured products and other sales products can be well displayed.  
+    `,
+    toolsUsed: [
+      'NodeJs, Javascript',
+      'CSS',
+      'ExpressJs',
+      'MongoDB',
+      'Git',
+      'GitHub'
+    ]
   }
 ]
