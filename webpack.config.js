@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: './src/index.tsx',
   target: 'web',
   output: {
@@ -59,7 +59,7 @@ module.exports = {
       template: path.join(__dirname, 'public', 'index.html')
     })
   ],
-  devtool: 'source-map',
+  // devtool: 'source-map',
   stats: {
     errorDetails: true,
   },
