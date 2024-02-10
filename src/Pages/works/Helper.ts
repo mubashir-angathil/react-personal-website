@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Portfolio.',
-    link: 'https://portfolio-mubashirangathli.vercel.app/',
+    link: 'https://mubashirangathil.vercel.app/',
     thumbnail: IMAGES.projects.portfolio,
     description: `
     The portfolio website is currently built as a static site utilizing React with TypeScript.

@@ -1,6 +1,6 @@
 import React from 'react'
-import { PROJECTS } from './Helper'
 import './Works.scss'
+import { PROJECTS } from './Helper'
 
 const PageWorks: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const PageWorks: React.FC = () => {
                                         <div className='content-section'>
                                             <div className='row rows-cols-auto title-section mt-2' >
                                                 <h3 className='col'>{details.title}</h3>
-                                                <a className='col text-end' href={details.link}>Live</a>
+                                                <a className='col text-end' href={details.link} target='_blank' rel="noreferrer">Live</a>
                                             </div>
                                             <div className='description-section'>
                                                 <p className='text-justify'>{details.description}</p>

@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './src/index.tsx',
   target: 'web',
   output: {
@@ -36,9 +36,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            // options: {
-            //   outputPath: 'assets/Images', // Relative path to the 'dist' directory
-            // },
+            options: {
+              outputPath: 'assets/Images', // Relative path to the 'dist' directory
+            },
           },
         ],
       },
@@ -59,7 +59,7 @@ module.exports = {
       template: path.join(__dirname, 'public', 'index.html')
     })
   ],
-  // devtool: 'source-map',
+  devtool: 'source-map',
   stats: {
     errorDetails: true,
   },
