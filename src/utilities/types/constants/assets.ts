@@ -7,6 +7,7 @@ import portfolio from '../../../assets/images/portfolio.png'
 import movieTrends from '../../../assets/images/movietrends.png'
 import boardAdminDashboard from '../../../assets/images/boardsignIn.png'
 import nthTrack from '../../../assets/images/nthtrack.png'
+import lovers from '../../../assets/images/lovers.png'
 
 const IMAGES = {
   logo,
@@ -18,7 +19,8 @@ const IMAGES = {
     portfolio,
     movieTrends,
     boardAdminDashboard,
-    nthTrack
+    nthTrack,
+    lovers
   }
 }
 

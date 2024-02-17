@@ -138,6 +138,14 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    title: 'Lovers',
+    description: `Find the ideal Valentine's Day poetry for any couple.
+     Simply input two names and receive a personalized picture of a poem text, perfect for expressing your love on this special occasion.`,
+    link: 'https://love-verse-cl3.pages.dev/',
+    thumbnail: IMAGES.projects.lovers,
+    toolsUsed: ['React', 'Vite', 'Open AI 4', 'NodeJs', 'Git']
+  },
+  {
     title: 'Fixtures.',
     link: 'https://github.com/mubashir-angathil/shopping_cart',
     thumbnail: IMAGES.projects.fixtures,
@@ -148,7 +156,8 @@ export const PROJECTS: Project[] = [
    Featured products and other sales products can be well displayed.  
     `,
     toolsUsed: [
-      'NodeJs, Javascript',
+      'NodeJs',
+      'Javascript',
       'CSS',
       'ExpressJs',
       'MongoDB',
